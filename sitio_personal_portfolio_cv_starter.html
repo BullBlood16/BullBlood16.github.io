@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Francisco Concetti — Portfolio & CV</title>
+  <meta name="description" content="Portfolio, CV y bitácora de un estudiante avanzado de Ingeniería Electrónica en Buenos Aires." />
+  <meta name="author" content="Francisco Concetti" />
+  <meta property="og:title" content="Francisco Concetti — Portfolio & CV" />
+  <meta property="og:description" content="Proyectos, experiencia y bitácora técnica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="/assets/favicon.png" />
+  <style>
+    :root{
+      --bg: #0b1020; --card:#0f172a; --txt:#e5e7eb; --muted:#9ca3af; --acc:#22d3ee; --acc2:#a78bfa;
+      --light-bg:#f8fafc; --light-card:#ffffff; --light-txt:#0b1020; --light-muted:#475569;
+      --radius: 16px; --shadow: 0 10px 25px rgba(2,8,23,0.35);
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--txt)}
+    .light body{background:var(--light-bg);color:var(--light-txt)}
+    .container{max-width:1080px;margin:0 auto;padding:32px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    nav a{color:var(--txt);text-decoration:none;margin:0 10px;opacity:.85}
+    nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b1020;border:none;padding:10px 14px;border-radius:999px;font-weight:600;box-shadow:var(--shadow);text-decoration:none}
+    .ghost{background:transparent;outline:1px solid rgba(148,163,184,.3);color:var(--txt)}
+    .grid{display:grid;gap:22px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:28px}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .light .card{background:var(--light-card)}
+    h1{font-size:clamp(28px,2.8vw,42px);line-height:1.15;margin:0}
+    h2{font-size:clamp(22px,2.2vw,30px);margin:8px 0 4px}
+    h3{margin:0 0 6px}
+    p{margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.12);margin:6px 6px 0 0;font-size:13px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .project .meta{display:flex;justify-content:space-between;align-items:center}
+    .project a{color:var(--txt);text-decoration:none}
+    .timeline{position:relative;padding-left:22px}
+    .timeline:before{content:"";position:absolute;left:8px;top:2px;bottom:2px;width:2px;background:linear-gradient(var(--acc),transparent)}
+    .event{position:relative;margin:16px 0}
+    .event:before{content:"";position:absolute;left:-2px;top:6px;width:10px;height:10px;border-radius:999px;background:var(--acc)}
+    footer{margin:40px 0 10px;text-align:center;color:var(--muted)}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#e5e7eb;border-radius:6px;padding:2px 6px;font-size:12px}
+    .switch{cursor:pointer;border:0;background:transparent;color:var(--txt);opacity:.85}
+    .avatar{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover;filter:saturate(105%)}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.hide-sm{display:none}}
+  </style>
+  <script>
+    // Simple dark/light toggle stored in localStorage
+    function setMode(mode){document.documentElement.classList.toggle('light', mode==='light');localStorage.setItem('mode',mode)}
+    function toggleMode(){const now=document.documentElement.classList.contains('light')?'dark':'light';setMode(now)}
+    (function(){const saved=localStorage.getItem('mode'); if(saved) setMode(saved);})();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Francisco Concetti",
+    "url": "https://tu-dominio.com",
+    "jobTitle": "Estudiante de Ingeniería Electrónica",
+    "knowsAbout": ["Electrónica de Potencia","Conversores DC-DC","Power BI"],
+    "address": {"@type": "PostalAddress","addressLocality": "Buenos Aires","addressCountry": "AR"}
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="row">
+        <strong>Francisco Concetti</strong>
+        <span class="muted hide-sm">· Electrónica · Data · Proyectos</span>
+      </div>
+      <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#bitacora">Bitácora</a>
+        <a href="#contacto">Contacto</a>
+        <button class="switch" title="Modo claro/oscuro" onclick="toggleMode()">🌓</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Ingeniería electrónica aplicada, datos y aprendizaje continuo.</h1>
+        <p class="muted">Soy estudiante avanzado de Ingeniería Electrónica (Buenos Aires). Mi tesis aborda un convertidor <em>forward</em> con realimentación magnética para aplicaciones espaciales. También disfruto del análisis de datos (Power BI) y la documentación técnica.</p>
+        <div class="row" style="margin-top:10px">
+          <a class="btn" href="#contacto">Hablemos</a>
+          <a class="btn ghost" href="assets/Francisco-Concetti-CV.pdf" download>Descargar CV</a>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <span class="tag">DC‑DC Forward @ 500 kHz</span>
+          <span class="tag">Realimentación Magnética</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Python</span>
+          <span class="tag">LaTeX</span>
+        </div>
+      </div>
+      <div class="card hide-sm">
+        <img class="avatar" src="assets/avatar.jpg" alt="Foto de Francisco" />
+        <p class="muted" style="margin-top:10px">Tip: reemplaza <span class="kbd">/assets/avatar.jpg</span> por tu foto cuadrada (600×600 px).</p>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="grid" style="margin-top:26px">
+      <div class="card">
+        <h2>Sobre mí</h2>
+        <p>Responsable, curioso y adaptable. Experiencia en automatización y soporte técnico industrial (pasantía en Ternium) y voluntariado docente en Fundación Sí. Busco oportunidades para aportar en diseño/validación de electrónica de potencia, mantenimiento electrónico o analítica de datos.</p>
+      </div>
+      <div class="card">
+        <h2>Habilidades</h2>
+        <div class="row">
+          <span class="pill">Electrónica de Potencia</span>
+          <span class="pill">Modelado pequeño‑señal</span>
+          <span class="pill">LTspice / MATLAB</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Python (pandas)</span>
+          <span class="pill">LaTeX / Overleaf</span>
+          <span class="pill">Git / GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" style="margin-top:26px">
+      <h2>Proyectos destacados</h2>
+      <div class="grid projects">
+        <article class="card project">
+          <div class="meta">
+            <h3>Convertidor Forward p/ satélites</h3>
+            <small class="muted">2025</small>
+          </div>
+          <p>Diseño y análisis de un convertidor forward a 500 kHz con realimentación magnética (sin opto), énfasis en estabilidad de lazo y <em>radiation‑hardness</em>.</p>
+          <p class="row"><a class="tag" href="#">PDF de la tesis</a> <a class="tag" href="#">Resultados y ondas</a></p>
+        </article>
+        <article class="card project">
+          <div class="meta">
+            <h3>Dashboard de mantenimiento</h3>
+            <small class="muted">2024</small>
+          </div>
+          <p>KPIs de postventa/soporte con Power BI. Diseño de modelo, limpieza en Python y publicación segura.</p>
+          <p class="row"><a class="tag" href="#">Demo</a> <a class="tag" href="#">Código</a></p>
+        </article>
+        <article class="card project">
+          <div class="meta">
+            <h3>Toolbox de filtros (Python)</h3>
+            <small class="muted">2023</small>
+          </div>
+          <p>Aplicación simple para abrir imágenes y aplicar filtros (raíz, cuadrado, piecewise) con controles.</p>
+          <p class="row"><a class="tag" href="#">Repositorio</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="grid" style="margin-top:26px">
+      <div class="card">
+        <h2>Experiencia</h2>
+        <div class="timeline">
+          <div class="event">
+            <h3>Ternium — Pasantía (Automatización)</h3>
+            <p class="muted">2024 · CABA, AR</p>
+            <p>Soporte técnico y resolución de problemas en sistemas de control. Participación en mejoras de procesos.</p>
+          </div>
+          <div class="event">
+            <h3>Fundación Sí — Voluntariado</h3>
+            <p class="muted">2023–2025 · Virtual</p>
+            <p>Docente de Matemática (Álgebra y Geometría Analítica) para ingresantes universitarios.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Educación & cursos</h2>
+        <ul>
+          <li>Ing. Electrónica — Tesis en curso (graduación estimada 2025)</li>
+          <li>Fundamentos de Power BI — Santander Open Academy (2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="bitacora" style="margin-top:26px">
+      <h2>Bitácora</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Demagnetización en forward: opciones y trade‑offs</h3>
+          <p class="muted">Sep 2025 · 5 min</p>
+          <p>Resumen de pruebas sobre <em>self‑resonant reset</em> y su impacto en pérdidas y control.</p>
+          <a class="btn ghost" href="#">Leer</a>
+        </article>
+        <article class="card">
+          <h3>Notas de modelado con TL431 y opto</h3>
+          <p class="muted">Ago 2025 · 6 min</p>
+          <p>Apuntes de compensación y limitaciones de ancho de banda.</p>
+          <a class="btn ghost" href="#">Leer</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="grid" style="margin-top:26px">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>¿Te interesa colaborar o tenés una propuesta? Escribime:</p>
+        <p><a class="btn" href="mailto:francisco.concetti@example.com">francisco.concetti@example.com</a></p>
+        <div class="row">
+          <a class="tag" href="#">LinkedIn</a>
+          <a class="tag" href="#">GitHub</a>
+          <a class="tag" href="#">ORCID</a>
+        </div>
+        <p class="muted" style="margin-top:10px">Tip: usa un alias de correo para evitar spam y activa <span class="kbd">reCAPTCHA</span> si más adelante agregás un formulario.</p>
+      </div>
+      <div class="card">
+        <h2>Créditos & Licencia</h2>
+        <p>Este sitio está construido como <strong>HTML estático</strong> con un poco de CSS y JS. Podés desplegarlo gratis en GitHub Pages, Netlify o Vercel.</p>
+        <p class="muted">© <span id="yy"></span> Francisco Concetti · CC BY‑NC 4.0</p>
+        <script>document.getElementById('yy').textContent = new Date().getFullYear()</script>
+      </div>
+    </section>
+
+    <footer>
+      Hecho con ♥ y café. Rendimiento > adornos.
+    </footer>
+  </div>
+</body>
+</html>
