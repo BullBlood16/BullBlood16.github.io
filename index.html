@@ -12,6 +12,10 @@
   <meta property="og:image" content="/assets/og-image.jpg" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" href="/assets/favicon.png" />
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" 
+  />
   <style>
     :root{
       --bg: #0b1020; --card:#0f172a; --txt:#e5e7eb; --muted:#9ca3af; --acc:#22d3ee; --acc2:#a78bfa;
@@ -71,6 +75,12 @@
   </script>
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+  Fancybox.bind("[data-fancybox]", {
+    // Puedes dejar esto vacío por ahora
+  });
+</script>
   <div class="container">
     <header>
       <div class="row">
@@ -78,9 +88,10 @@
         <span class="muted hide-sm">· Electrónica · Data · Proyectos</span>
       </div>
       <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>        
         <a href="#experiencia">Experiencia</a>
+        <a href="#Educación & cursos">Educación</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#bitacora">Bitácora</a>
         <a href="#contacto">Contacto</a>
         <button class="switch" title="Modo claro/oscuro" onclick="toggleMode()">🌓</button>
@@ -177,9 +188,24 @@
       <h2>Educación & Cursos</h2>
       <div class = "grid">
         <article class="card">
-          <h3>Universidad de Buenos Aires (UBA)</h3>
-          <p class="muted">2020–Presente · Buenos Aires, AR</p>
-          <p>Estudiante avanzado de Ingeniería Electrónica. Tesis sobre convertidor DC-DC <em>forward</em> con realimentación magnética para aplicaciones espaciales.</p>
+          <h3>Universidad Nacional del Sur (UNS)</h3>
+          <p class="muted">2017–Presente · Bahia Blanca, AR</p>
+          <p>Tesis sobre convertidor DC-DC <em>forward</em> con realimentación magnética para aplicaciones espaciales junto al INVAP.</p>
+        </article>
+        <article class = "card">
+          <h3>Inmersion IA + Google Gemini - Alura</h3>
+            <p class="muted">Septiembre 2025 · Online</p>
+            <p>Desarrolle habilidades en uso práctico de Gemini, creación de prompts efectivos e integración con Google Workspace para automatizar procesos y crear asistentes inteligentes.</p>
+            <p style="margin-top: 1rem;">
+          <a 
+            href="certificados/certificado-alura-gemini.pdf" 
+            data-fancybox 
+            data-type="pdf"
+            class="boton-certificado" 
+          >
+            Ver Certificado 📜
+          </a>
+            </p>
         </article>
       </div>
 
@@ -230,8 +256,8 @@
         </article>
         <article class="card project">
           <div class="meta">
-            <h3>Dashboard de mantenimiento</h3>
-            <small class="muted">2024</small>
+            <h3>Dashboard en PowerBI</h3>
+            <small class="muted">2025</small>
           </div>
           <p>KPIs de postventa/soporte con Power BI. Diseño de modelo, limpieza en Python y publicación segura.</p>
           <p class="row"><a class="tag" href="#">Demo</a> <a class="tag" href="#">Código</a></p>
@@ -284,7 +310,7 @@
     </section>
 
     <footer>
-      Hecho con ❤️ y mate. Rendimiento > adornos sape.
+      Hecho con ❤️ y mate.
     </footer>
   </div>
 </body>
