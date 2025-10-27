@@ -54,6 +54,22 @@
     .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#e5e7eb;border-radius:6px;padding:2px 6px;font-size:12px}
     .switch{cursor:pointer;border:0;background:transparent;color:var(--txt);opacity:.85}
     .avatar{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover;filter:saturate(105%)}
+    .boton-certificado {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg,var(--acc),var(--acc2));
+      color: #0b1020;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+.boton-certificado:hover {
+  opacity: 0.85; /* O el efecto hover que prefieras */
+}
     @media (max-width:880px){.hero{grid-template-columns:1fr}.hide-sm{display:none}}
   </style>
   <script>
@@ -75,12 +91,6 @@
   </script>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script>
-  Fancybox.bind("[data-fancybox]", {
-    // Puedes dejar esto vacío por ahora
-  });
-</script>
   <div class="container">
     <header>
       <div class="row">
@@ -313,5 +323,11 @@
       Hecho con ❤️ y mate.
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+  Fancybox.bind("[data-fancybox]", {
+    // Puedes dejar esto vacío por ahora
+  });
+</script>
 </body>
 </html>
