@@ -27,7 +27,7 @@
     .light body{background:var(--light-bg);color:var(--light-txt)}
     .container{max-width:1080px;margin:0 auto;padding:32px}
     header{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    nav a{color:var(--txt);text-decoration:none;margin:0 10px;opacity:.85}
+    nav a{color:var(--txt);text-decoration:none;margin:0;opacity:.85}
     nav a:hover{opacity:1}
     .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b1020;border:none;padding:10px 14px;border-radius:999px;font-weight:600;box-shadow:var(--shadow);text-decoration:none}
     .ghost{background:transparent;outline:1px solid rgba(148,163,184,.3);color:var(--txt)}
@@ -50,20 +50,78 @@
     }
     p{margin:0 0 8px}
     .muted{color:var(--muted)}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.12);margin:6px 6px 0 0;font-size:13px}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35)}
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(148,163,184,.12);
+      margin:6px 6px 0 0;
+      font-size:13px
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(34,211,238,.12);
+      border:1px solid rgba(34,211,238,.35)
+    }
     .row{display:flex;gap:12px;flex-wrap:wrap}
     .projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .project .meta{display:flex;justify-content:space-between;align-items:center}
     .project a{color:var(--txt);text-decoration:none}
     .timeline{position:relative;padding-left:22px}
-    .timeline:before{content:"";position:absolute;left:8px;top:2px;bottom:2px;width:2px;background:linear-gradient(var(--acc),transparent)}
-    .event{position:relative; margin:16px 0; padding-left:15px}
-    .event:before{content:"";position:absolute;left:-2px;top:6px;width:10px;height:10px;border-radius:999px;background:var(--acc)}
-    footer{margin:40px 0 10px;text-align:center;color:var(--muted)}
-    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#e5e7eb;border-radius:6px;padding:2px 6px;font-size:12px}
-    .switch{cursor:pointer;border:0;background:transparent;color:var(--txt);opacity:.85}
-    .avatar{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover;filter:saturate(105%)}
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:8px;
+      top:2px;
+      bottom:2px;
+      width:2px;
+      background:linear-gradient(var(--acc),transparent)
+    }
+    .event{
+      position:relative;
+      margin:16px 0; 
+      padding-left:15px
+    }
+    .event:before{
+      content:"";
+      position:absolute;
+      left:-2px;
+      top:9px;
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:var(--acc)
+    }
+    footer{
+      margin:40px 0 10px;
+      text-align:center;
+      color:var(--muted)
+    }
+    .kbd{
+      font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+      background:#111827;
+      color:#e5e7eb;      
+      border-radius:6px;
+      padding:2px 6px;
+      font-size:12px
+    }
+    .switch{
+      cursor:pointer;
+      border:0;
+      background:transparent;
+      color:var(--txt);
+      opacity:.85
+    }
+    .avatar{
+      border-radius:14px;
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      filter:saturate(105%)}
     .boton-certificado {
       display: inline-flex;
       align-items: center;
@@ -77,25 +135,29 @@
       box-shadow: var(--shadow);
       text-decoration: none;
     }
-.boton-certificado:hover {
-  opacity: 0.85; /* O el efecto hover que prefieras */
-}
+    .boton-certificado:hover {
+    opacity: 0.85;
+    }
     @media (max-width:880px){.hero{grid-template-columns:1fr}.hide-sm{display:none}}
     header strong, nav a {
       font-size: 1.1rem;}
     .light nav a {
       color: var(--light-txt); 
-}
+    }
     .light .muted {
       color: var(--light-muted); 
-}
-.main-logo {
-  font-size: clamp(32px, 5vw, 56px);
-  line-height: 1;
-  font-weight: 900;
-  letter-spacing: -1.5px;
-}
-
+    }
+    .main-logo {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
   </style>
   <script>
     // Simple dark/light toggle stored in localStorage
@@ -144,13 +206,13 @@
           <a class="btn" href="#contacto">Hablemos</a>
           <a class="btn" href="Curriculum/CONCETTI_FRANCISCO_CV.pdf" download>Descargar CV</a>
         </div>
-        <div class="row" style="margin-top:12px">
+        <!--<div class="row" style="margin-top:12px">
           <span class="tag">Apasionado</span>
           <span class="tag">Comprometido con el trabajo</span>
           <span class="tag">Ingles Avanzado</span>
           <span class="tag">Adaptación Nuevas tecnologías (IA, machine learning)</span>
           <span class="tag">Ordenado</span>
-        </div>
+        </div>-->
       </div>
       <div class="card hide-sm">
         <img class="avatar" src="assets/img/perfil.jpg" alt="Foto de Francisco" />
@@ -163,9 +225,13 @@
         <h2>Sobre mí</h2>
         <p>
           Mi nombre Francisco Concetti, soy de Bahia Blanca, tengo 27 años y estoy finalizando mi carrera en  Ingeniería Electrónica en la Universidad Nacional del Sur.
+          
           Durante el verano del 2025, tuve la oprtunidad de formar parte de las PEVs en la empresa TERNIUM del grupo Techint en su planta de San Nicolas de los Arroyos. Forme parte del área de operaciones de hojalata, temper y recocido, donde pude trabajar en la mejora de estos procesos. 
+          
           Actualmente, estoy trabajando en mi tesis final de carrera junto al INVAP, también participo como voluntario en la Fundación Sí, dando clases de matemáticas a estudiantes secundarios y universitarios y colaboro con mi padre en su profesion como carpintero dandole una mano con el diseño de los amoblamientos a medida en 2D como 3D, y con el contacto con los clientes. 
+          
           Por parte de la UNS tuve la posibilidad de formar parte de proyectos que trabajaban con IA, uno del CONICET que trataba del proceso de imagenes y con ECODOC Dental que identificaba patologias a partir de imagenes panoramicas bucales.
+          
           Fuera del ámbito profesional o académico, formo parte de un equipo de futbol de la liga universitaria de Bahia Blanca del cual soy el DT, también me gusta pintar cuadros y tocar la guitarra, estas son actividades que me permiten mantenerme activo, despejarme y disfrutar.
         </p>
       </div>
@@ -185,6 +251,14 @@
                 <li>Evalué la efectividad de las estrategias existentes y sugerí ajustes para optimizar el rendimiento.</li>
                 <li>Investigué las causas de los problemas de forma en las bobinas observadas durante el proceso de estañado, analizando las posibles variables que afectan la calidad y proponiendo soluciones para corregir las imperfecciones detectadas.</li>
               </ul>
+            <a 
+              href="certificados/Certificado CONCETTI FRANCISCO.pdf" 
+              data-fancybox 
+              data-type="pdf"
+              class="boton-certificado" 
+            >
+            Ver Certificado 📜
+            </a>
             </p>
           </div>
           
