@@ -19,7 +19,7 @@
   <style>
     :root{
       --bg: #0b1020; --card:#0f172a; --txt:#e5e7eb; --muted:#9ca3af; --acc:#22d3ee; --acc2:#a78bfa;
-      --light-bg:#f8fafc; --light-card:#ffffff; --light-txt:#0b1020; --light-muted:#475569;
+      --light-bg:#f8fafc; --light-card:#ffffff; --light-txt:#131c35; --light-muted:#475569;
       --radius: 16px; --shadow: 0 10px 25px rgba(2,8,23,0.35);
     }
     html{scroll-behavior:smooth}
@@ -171,7 +171,7 @@
     "@type": "Person",
     "name": "Francisco Concetti",
     "url": "https://tu-dominio.com",
-    "jobTitle": "Estudiante de Ingeniería Electrónica",
+    "jobTitle": "Ingeniero Electrónico",
     "knowsAbout": ["Electrónica de Potencia","Conversores DC-DC","Power BI"],
     "address": {"@type": "PostalAddress","addressLocality": "Buenos Aires","addressCountry": "AR"}
   }
@@ -187,7 +187,9 @@
       <nav>
         <a href="#sobre-mi">Sobre mí</a>        
         <a href="#experiencia">Experiencia</a>
-        <a href="#Educación & cursos">Educación</a>
+        <a href="#educación">Educación</a>
+        <a href="capacitaciones">Capacitaciones</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#bitacora">Bitácora</a>
         <a href="#contacto">Contacto</a>
@@ -197,7 +199,7 @@
 
     <section class="hero">
       <div class="card">
-        <h1>Estudiante avanzado de Ingeniería electrónica.</h1>
+        <h1>Ingeniero Electrónico.</h1>
         <p class="muted">
           <!--Soy estudiante avanzado de Ingeniería Electrónica, próximo a finalizar mi proyecto final de carrera y con un fuerte enfoque en sistemas de control y automatización industrial. Mi experiencia práctica en Ternium me permitió participar activamente en proyectos de mejora y automatización, desarrollando habilidades clave en el diagnóstico y chequeo de fallas en equipos, así como en el conexionado de instrumentación. Poseo una sólida base en conocimientos en programación de sistemas de control adquiridos en mi formación. Me considero una persona proactiva, con gran capacidad de trabajo en equipo y lista para asumir nuevos desafíos. Busco unirme a Fischer Instrumentación y Control para contribuir a sus proyectos desafiantes, aprender de su equipo técnico y desarrollarme profesionalmente en un entorno de tecnología de punta.  
         -->
@@ -222,17 +224,15 @@
 
     <section id="sobre-mi" class="grid" style="margin-top:26px">
       <div class="card">
-        <h2>Sobre mí</h2>
+        <h2>Presentacion personal</h2>
         <p>
-          Mi nombre Francisco Concetti, soy de Bahia Blanca, tengo 27 años y estoy finalizando mi carrera en  Ingeniería Electrónica en la Universidad Nacional del Sur.
-          
-          Durante el verano del 2025, tuve la oprtunidad de formar parte de las PEVs en la empresa TERNIUM del grupo Techint en su planta de San Nicolas de los Arroyos. Forme parte del área de operaciones de hojalata, temper y recocido, donde pude trabajar en la mejora de estos procesos. 
-          
-          Actualmente, estoy trabajando en mi tesis final de carrera junto al INVAP, también participo como voluntario en la Fundación Sí, dando clases de matemáticas a estudiantes secundarios y universitarios y colaboro con mi padre en su profesion como carpintero dandole una mano con el diseño de los amoblamientos a medida en 2D como 3D, y con el contacto con los clientes. 
-          
-          Por parte de la UNS tuve la posibilidad de formar parte de proyectos que trabajaban con IA, uno del CONICET que trataba del proceso de imagenes y con ECODOC Dental que identificaba patologias a partir de imagenes panoramicas bucales.
-          
-          Fuera del ámbito profesional o académico, formo parte de un equipo de futbol de la liga universitaria de Bahia Blanca del cual soy el DT, también me gusta pintar cuadros y tocar la guitarra, estas son actividades que me permiten mantenerme activo, despejarme y disfrutar.
+          Soy de Bahia Blanca, tengo 27 años y estoy en busca de iniciar mi carrera profesional como ingeniero. Poseo una gran variedad de habilidades que me hacen un candidato distinto, mis intereses no
+          se centran unicamente en la electronica, sino que tambien 
+          Estoy en busca de encontrar un espacio donde pueda desarrollar e implementar ingenieria, considero que la electronica se encuentra en todas partes
+          por lo que no me limito a una especializacion unica en particular, quiero seguir aprendiendo y creciendo profesionalmente, y para eso busco un lugar donde pueda aportar valor y a la vez aprender de profesionales con experiencia.
+          - Que mas 
+          - Realice mis practicas en TERNIUM
+          - Trabaje en Marpatech      
         </p>
       </div>
 
@@ -299,8 +299,8 @@
       </div>
     </section>
 
-    <section id="Educación & cursos" class="grid" style="margin-top:26px">
-      <h2>Educación & Cursos</h2>
+    <section id="educación" class="grid" style="margin-top:26px">
+      <h2>Educación</h2>
       <div class = "grid">
         <article class="card">
           <h3>Universidad Nacional del Sur (UNS)</h3>
@@ -431,8 +431,11 @@
         <h2>Contacto</h2>
         <p>¿Te interesa colaborar o tenés una propuesta? Escribime:</p>
         <p><a class="btn" href="mailto:franconcetti16@gmail.com">franconcetti16@gmail.com</a></p>
+        Otras formas de contactarme:
+
         <div class="row">
           <a class="btn" href="https://www.linkedin.com/in/fconcetti/">LinkedIn</a>
+          <a class="btn" href="https://wa.me/5492914739890" target="_blank">WhatsApp 💬</a> 
           <a class="btn" href="https://github.com/BullBlood16">GitHub</a>         
         </div>
         <p class="muted" style="margin-top:10px">Tip: usa un alias de correo para evitar spam y activa <span class="kbd">reCAPTCHA</span> si más adelante agregás un formulario.</p>
@@ -440,7 +443,7 @@
       <div class="card">
         <h2>Créditos & Licencia</h2>
         <p>Este sitio está construido como <strong>HTML estático</strong> con un poco de CSS y JS. Podés desplegarlo gratis en GitHub Pages, Netlify o Vercel.</p>
-        <p class="muted">© <span id="yy"></span> Francisco Concetti · CC BB‑BA 1.0</p>
+        <p class="muted">© <span id="yy"></span> Francisco Concetti · CC BB‑BA 1.5</p>
         <script>document.getElementById('yy').textContent = new Date().getFullYear()</script>
       </div>
     </section>
