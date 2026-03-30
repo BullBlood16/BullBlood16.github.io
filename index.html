@@ -25,13 +25,16 @@
     html{scroll-behavior:smooth}
     body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--txt)}
     .light body{background:var(--light-bg);color:var(--light-txt)}
-    .container{max-width:1080px;margin:0 auto;padding:32px}
+    .container{
+      max-width:1080px;
+      margin:0 auto;
+      padding:32px}
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
       width: 100%;
-      padding: 0 15%;
+      padding: 0 auto;
     }
     nav a{color:var(--txt);text-decoration:none;margin:0;opacity:.85}
     nav a:hover{opacity:1}
@@ -144,7 +147,7 @@
     .boton-certificado:hover {
     opacity: 0.85;
     }
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.hide-sm{display:none}}
+    @media (max-width:950px){.hero{grid-template-columns:1fr}.hide-sm{display:none}}
     header strong, nav a {
       font-size: 1.1rem;}
     .light nav a {
@@ -304,6 +307,29 @@
         </div>
       </div>
     </section>
+
+<section id="experiencia" class="grid" style="margin-top:26px">
+  <div class="card">
+    <h2>Voluntariado</h2>
+    <h3>Fundación Sí</h3>
+    <p class="muted">SEP 2024 - Actualidad · Remoto, AR</p>
+
+    <p>
+      Como voluntario en Fundación SI, formo parte de un equipo comprometido con la inclusión social en Argentina, enfocado especialmente en los sectores más vulnerables.
+      Creemos firmemente en el valor del trabajo en equipo y en la capacidad de transformar realidades a través de la colaboración. Estoy convencido de que la educación es una herramienta poderosa para el cambio y me siento orgulloso de contribuir a esta misión.
+      Mi labor actual se centra en brindar apoyo educativo virtual a estudiantes de las Residencias Universitarias de la fundación. Mi objetivo es ayudarles a fortalecer sus conocimientos y superar desafíos académicos.
+    </p>
+
+    <ul>
+      <li>Brindo tutorías en matemáticas, álgebra y geometría analítica.</li>
+      <li>Apoyo a estudiantes de 24 residencias distribuidas en diversas provincias, como Santiago del Estero, La Rioja, Catamarca, Córdoba y Neuquén.</li>
+      <li>Los docentes voluntarios registramos nuestras áreas de especialización.</li>
+      <li>Cuando un estudiante necesita ayuda en una materia específica, la fundación contacta al voluntario con el perfil adecuado.</li>
+      <li>Este sistema nos permite adaptarnos a las demandas concretas de cada estudiante, brindando el apoyo necesario para su desarrollo académico.</li>
+    </ul>
+
+  </div>
+</section>
 
     <section id="educación" class="grid" style="margin-top:26px">
       <h2>Educación</h2>
