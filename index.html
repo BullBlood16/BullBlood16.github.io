@@ -26,7 +26,13 @@
     body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--txt)}
     .light body{background:var(--light-bg);color:var(--light-txt)}
     .container{max-width:1080px;margin:0 auto;padding:32px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width: 100%;
+      padding: 0 15%;
+    }
     nav a{color:var(--txt);text-decoration:none;margin:0;opacity:.85}
     nav a:hover{opacity:1}
     .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b1020;border:none;padding:10px 14px;border-radius:999px;font-weight:600;box-shadow:var(--shadow);text-decoration:none}
@@ -185,7 +191,7 @@
         <!-- <span class="muted hide-sm">· Electrónica · Data · Proyectos</span> -->
       </div>
       <nav>
-        <a href="#sobre-mi">Sobre mí</a>        
+        <a href="#sobre-mi">Presentación</a>        
         <a href="#experiencia">Experiencia</a>
         <a href="#educación">Educación</a>
         <a href="#capacitaciones">Capacitaciones</a>
